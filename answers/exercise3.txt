@@ -1,0 +1,9 @@
+docker start -i nice_mclaren
+
+nano /usr/src/app/index.js
+
+console.log('Hello World');
+
+Ctrl + X -> Y -> Enter
+
+exit

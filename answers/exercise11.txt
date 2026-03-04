@@ -1,0 +1,15 @@
+docker exec -it todo-backend-redis-1 redis-cli
+
+KEYS added_todos
+
+GET added_todos
+
+SET added_todos 9001
+
+# Check for increased counter after adding a new note
+GET added_todos
+
+DEL added_todos
+
+# Check that after deleting the key and then add a new note, the counter still work
+GET added_todos

@@ -1,0 +1,14 @@
+docker start -i nice_mclaren
+
+apt install curl
+
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+
+\. "$HOME/.nvm/nvm.sh"
+
+# Install Node
+nvm install 24
+
+# Run created index.js file
+node /usr/src/app/index.js

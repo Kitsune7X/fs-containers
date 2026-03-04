@@ -1,0 +1,15 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: todo-frontend
+    ports:
+      - '8080:80'
+  app-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: test
+    container_name: todo-frontend-test
+    command: ['npm', 'run', 'test']
